@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="animate.css">
+	 <script src="wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My character's</title>
+<style type="text/css">
+/*	body, html {cursor: url(mouse.cur), auto}
+*/	html{font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		scroll-behavior: smooth;
+
+		}
+	@font-face {
+    	font-family: 'Alloy-Regular';
+    	src: url('./fonts/Alloy-Regular.woff') format('woff');
+    	font-weight: normal;
+    	font-style: normal;
+		}
+	@font-face {
+    	font-family: 'Alloy-light';
+    	src: url('./fonts/Alloy-light.woff') format('woff');
+    	font-weight: normal;
+    	font-style: normal;
+		}
+	body,.intro,header,h1,p,li,nav,ul,h2,h3{margin: 0; padding: 0;}
+	li,ul{list-style: none;}
+	a{text-decoration: none; color: none;}
+	.row{width: 1200px; margin: auto;}
+	.intro{
+		width: 100%; height: 100vh;
+		overflow: hidden;
+		background: blue;
+		background-image: url(main-back2.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		background-attachment: fixed;
+	}
+	.intro header{
+		display: flex; 
+		margin-top: 100px;
+	flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;	
+	}
+
+	.intro header h1,p{color: white;}
+	.intro header h1{font-family: 'Alloy-Regular'; font-size: 100pt; margin-bottom: 0px;}
+	.intro header p{font-family: 'Alloy-light'; font-size: 20pt; line-height: 1.5;}
+	.main-menu{
+		width: 140px;
+		overflow: hidden;
+		text-align: right; 
+		position: relative; 
+		display: inline-block;
+	}
+	.menu-content{
+		margin-top: 40px;
+	}
+	.menu-content li{
+		margin-top: 30px;
+	}
+	.menu-content a{
+		color: white;
+		font-weight: 200;
+		font-size: 1.2rem;
+	}
+	input#menu-bt{
+		display: none;
+		opacity: 0;
+	}
+	.menu-content{
+		opacity: 0;
+		transition: all 0.5s;
+	}
+/*메뉴 드롭다운 네비*/
+	input#menu-bt:checked + .menu-content{
+		opacity: 1; display: block;
+		transition: all 0.7s cubic-bezier(.645,.045,.355,1);
+
+	}
+/*메뉴 마우스오버*/
+
+	.menu-bt:hover{
+		opacity: 0.7;
+		transition-duration: 0.5s;
+	}
+	.menu-content a:hover{
+		opacity: 0.7;
+		transition-duration: 0.5s;
+	}
+	nav{display: flex; margin-top: 60px;}
+	nav div{padding-right: 24px;}
+/*아이콘 마우스오버*/
+	.icon-behance:hover{
+		opacity: 0.7;
+		transition-duration: 0.5s;
+	}
+	.icon-tistory:hover{
+		opacity: 0.7;
+		transition-duration: 0.5s;
+	}
+	.icon-resume:hover{
+		opacity: 0.7;
+		transition-duration: 0.5s;
+	}
+
+	.intro footer p{font-size: 1rem; font-weight: 200; 
+		display: block; position: absolute; bottom: 60px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.start{
+		display: block; position: absolute; left: 50%;
+		transform: translate(-50%, -50%);
+		bottom: 60px; text-align: center;
+	}
+	.start p{ 
+		margin-bottom: 10px;
+		font-weight: 200;
+		font-size: 1.4rem;
+	}
+	.main-bt{
+		animation: pulse 3s ease-in-out infinite;
+	}
+/*start hover*/
+	.main-bt:hover{
+		opacity: 0.7;
+		transform: scale(1.4);
+		transition-duration: 0.7s;
+	}
+
+/*select page*/
+	.select-back{
+		background: url(select-back.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+/*		background-attachment: fixed;*/
+	}
+	.select-text{
+		text-align: center;
+		padding-top: 120px;
+		color: white;
+	}
+	#select h1{font-family: 'Alloy-Regular'; font-size: 100pt; margin-bottom: 0px;}
+	#select p{margin-bottom: 10px;
+		font-weight: 300;
+		font-size: 1.2rem;
+		line-height: 1.6;
+		letter-spacing: -1.2px;
+	}
+/*select chracter*/
+	.select{
+		margin-top: 65px;
+		display: flex;
+		justify-content: center;
+		gap: 100px;
+	}
+
+	.select-guroo{
+		display: flex;
+		text-align: center;
+		color: white;
+		flex-direction: column;
+    	align-items: center;
+	}
+	.guroo-pic{
+	
+	}
+	.guroo-name{
+		margin-top: 10px;
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 8.5rem;
+		letter-spacing: -1.2px;
+
+		width: 140px; height: 140px;
+		
+		border-radius: 100px;
+		box-shadow: 0px 0px 30px 10px #6950FF;
+
+		transition: all 0.7s ease;
+
+
+	}
+	.hover-name{
+		margin-top: 20px;
+		font-weight: 400;
+		font-size: 1.3rem;
+		letter-spacing: -1.2px;
+		opacity: 0;
+		transition: all 0.7s ease;
+	}
+
+	.guroo-name:hover{opacity: 0.6; transform: scale(0.9);}
+	.guroo-name:hover + .hover-name{opacity: 100;}
+
+/*거루 프로필*/
+	#guroo-proflie{
+		position: relative;
+	}
+	.fixed-nav{
+		position: absolute;
+		bottom: 40px; right: 40px;
+		width: 82px; height: 82px;
+		font-size: 0.8rem;
+		color: white;
+		text-align: center;
+		line-height: 82px;
+		border-radius: 100px;
+		border: 1px solid #6950FF;
+		transition: all 0.3s ease;
+		position: fixed;
+		
+	}
+
+	.fixed-nav:hover{
+		background: rgba(255, 255, 255, 0.17);
+	}
+
+	.description{
+		color: white;
+		letter-spacing: -1px;
+		display: flex;
+		justify-content: center;
+		padding-top: 300px;
+		position: relative;
+	}
+
+	.description-back{
+		position: absolute;
+		top: ;
+		 left: 50%;
+  		transform: translateX(-50%);
+  		z-index: 1;
+	}
+
+	.chracter-des{
+		display: flex;
+		flex-direction: column;
+    	align-items: center;
+    	text-align: center;
+    	margin-right: 56px;
+    	z-index: 2;
+
+
+	}
+	.chracter-des h1{
+		font-size: 2.4rem; font-weight: 400;
+	}
+	.chracter-des p{
+		margin-top: 8px;
+		width: 140px;
+		background:  rgba(255, 255, 255, 0.12);
+		padding-top: 8px; padding-bottom: 8px;
+		padding-left: 24px; padding-right: 24px;
+		font-weight: 200;
+		font-size: 1rem;
+		box-sizing: border-box;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 36px;
+
+	}
+	.text-des{
+		z-index: 2;
+	}
+
+	.text-des h3{
+		font-family: 'Alloy-light';
+		font-size: 1rem;
+		color: #bdbdbd;
+	}
+	.text-des h2{
+		font-size: 1.4rem;
+		font-weight: 400;
+		margin-top: 47px;
+		margin-bottom: 8px;
+		color: white;
+	}
+	.text-des h1{
+		font-size: 2.6rem;
+		font-weight: 600;
+	}
+	.text-des p{
+		font-weight: 400;
+		font-size: 1.2rem;
+		line-height: 165%;
+		margin-top: 28px;
+		color: #bdbdbd;
+	}
+	.skill
+	{
+		display: flex;
+		align-items: center;
+		margin-top: 96px;
+	}
+	.skill-img{
+		margin-left: 28px;
+	}
+	.skill2,.skill3{
+		margin-right: 12px;
+	}
+
+/*거루 인터뷰*/
+	.interview{
+		text-align: center;
+		padding-top: 270px;
+		letter-spacing: -1px;
+		position: relative;
+
+	}
+
+	.interview h2{
+		font-size: 1.8rem;
+		margin-top: 18px;
+		margin-bottom: 110px;
+	}
+	.interview-back{
+		position: absolute;
+		top: 348px;
+		 left: 50%;
+  		transform: translateX(-50%);
+  		z-index: 3;
+	}
+
+	.text-in{
+		position: relative;
+		z-index: 4;
+	}
+	.interview p{
+		/*text-align: center;
+		margin: 0 auto;
+		width: 768px;
+		padding-top: 56px; padding-bottom: 56px;
+		background: #362697;*/
+		font-size: 1rem;
+		letter-spacing: -0.08em;
+		line-height: 1.8rem;
+		font-weight: 400;
+		color: white;
+/*		border-radius: 85px;
+		box-shadow: 0px 0px 50px 10px #4D37D6;*/
+		;
+	}
+/*피드*/
+	.feed-back{
+		background: black;
+		background: url(feed-guroo-back.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.feed-back2{
+		background: black;
+		background: url(feed-back2.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.feed-text{
+		padding-top: 230px;
+		text-align: center;
+		color: white;
+	}
+	.feed-text h1{
+	font-family: 'Alloy-Regular'; font-size: 100pt; margin-bottom: 0px;
+	}
+	.feed-text p{
+		margin-bottom: 10px;
+		font-weight: 300;
+		font-size: 1.2rem;
+		line-height: 1.6;
+		letter-spacing: -1.2px;
+	}
+
+	.feed{
+		margin-top: 100px;
+		display: flex;
+		align-items: center;
+    justify-content: center;
+	}
+
+	.feed-all
+		{
+			display: flex;
+			align-items: center;
+			 flex-direction: column;
+			
+		}
+
+	.feed-1{
+		 transition: all 0.7s ease;
+	}
+	.hover-feed
+	{	
+		text-align: center;
+		font-weight: 400;
+		font-size: 1.3rem;
+		letter-spacing: -1.2px;
+		opacity: 0;
+		transition: all 0.7s ease;
+		color: white;
+	}
+
+	.feed-1:hover{opacity: 0.6; transform: scale(0.9);}
+	.feed-1:hover + .hover-feed{opacity: 100;}
+
+</style>
+<body>
+	<header class="intro">
+	<div class="row">
+		<header>
+		<div class="main-menu wow fadeInRight">
+		<label class="menu-bt" for="menu-bt">
+			<img src="main-icon-hamburger.svg">
+		</label>
+			<input type="checkbox" id="menu-bt">
+
+			<div class="menu-content">
+				<li><a href="#guroo-proflie">디자이너의 자아</a></li>
+				<li><a href="#chloe-proflie">도전의 자아</a></li>
+			</div>
+		</div>
+		<div class="main-text wow fadeInLeft">
+			<h1>Hello</h1>
+			<p>I’m chaeyeon.<br>I introduce my characters’ world</p>
+		</div>
+		</header>
+		<nav class="wow fadeInLeft">
+			<div class="icon-behance"><a href="https://www.naver.com/" target="0"><img src="nav-icon-behance.svg"></a></div>
+			<div class="icon-tistory"><a href="https://www.naver.com/" target="0"><img src="nav-icon-tistory.svg"></a></div>
+			<div class="icon-resume"><a href="https://www.naver.com/" target="0"><img src="nav-icon-resume.svg"></a></div>
+		</nav>
+
+		<section class="start wow fadeIn" data-wow-offset="30">
+			<p>\ 저의 두 가지 자아를 소개할게요 /</p>
+			<a href="#select"><img src="main-bt.svg" class="main-bt"></a>
+		</section>
+		<footer class="wow fadeIn" data-wow-offset="30">
+			<p>2022&copy;이채연 | contact: codus3320@gmail.com</p>
+		</footer>
+	</div>
+	</header>
+
+<!-- 캐릭터선택 -->
+	<section style="background: linear-gradient(#000000, 60%, #0E092B);">
+		<div class="select-back" id="select">
+		<div class="row">
+			<div style="height: 960px;">
+			<div class="select-text wow fadeInDown" data-wow-offset="80">
+				<h1>Introduce</h1>
+				<p>저의 자아인 2가지 부캐를 소개합니다<br>부캐를 선택하면 경험을 볼 수 있어요</p>
+			</div>
+			<ul class="select wow bounce">
+				<div class="select-guroo">
+					<img src="select-guroo2.svg" class="guroo-pic">
+					<a href="#guroo-proflie" class="guroo-name"><div style="color:white;">거루</div></a>
+					<div class="hover-name">
+						디자이너의 자아
+					</div>
+				</div>
+				<div class="select-guroo">
+						<img src="select-chloe2.svg" class="guroo-pic">
+						<a href="#chloe-proflie" class="guroo-name" style="margin-top: 25px; color:white;"><div>클로이</div></a>
+						<div class="hover-name">
+							도전의 자아
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+		</div>
+	</section>
+<!-- 거루 프로필 -->
+	<section style="background-color: rgb(14, 9, 43); background-attachment: fixed;">
+		<div style="height: 1600px" id="guroo-proflie" >
+		<a href="#select"><div class="fixed-nav">
+				캐릭터로
+		</div></a>
+		<div class="row">
+			<div class="description">
+			<img src="description-back.svg" class="description-back">
+				<div class="chracter-des">
+					<img src="description-guroo.svg">
+					<h1>거루</h1>
+					<p>UX UI designer</p>
+				</div>
+				<div class="text-des">
+					<h3>Character description</h3>
+					<h2>디자이너의 자아</h2>
+					<h1>변화를 만들어내고 싶어요</h1>
+					<p>성격은 순하지만 스펙은 남다른,<br>강한 캥거루같은 디자이너를 목표로 하는 부캐릭터예요.<br>디자인 근육을 키우기 위해 노력하고 있어요.</p>
+				<div class="skill">
+					<h3>Skill</h3>
+					<div class="skill-img" style="display: flex; align-items: center;">
+					<img src="description-skill-figma.svg">
+					<img src="description-skill-adobe.svg" class="skill2">
+					<img src="description-skill-css3.svg" class="skill3">
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="interview">
+				<div class="text-des">
+					<h3>Character interview</h3>
+					<h2>어떤 디자인 철학을 가지고 있나요?</h2>
+				</div>
+				<div class="text-in">
+					<p>저는 UX가 연극의 배경과 같다고 생각해요. 
+					<br>연극의 분위기를 고민하지 않게 해주는 배경이요.
+					<br>유저가 고민없이 프로덕트를 사용하도록 만드는게 UX 디자인이라고 생각해요. 
+					<br>그래서 디자인 과정에서 항상 고민이 생기는 여러 요소를 생각하고 파고들어요.</p>
+				</div>
+				<img src="interview-back.svg" class="interview-back">
+			</div>
+		</div>
+	</section>
+<!-- 거루의 피드 -->
+	<section>
+		<div class="feed-back" style="height:1200px;" id="guroo-feed">
+		<div class="row">
+			<div class="feed-text wow fadeInDown" data-wow-offset="80">
+				<h1>The world</h1>
+				<p>디자이너의 자아 거루의 경험 피드예요<br>이미지를 클릭하면 설명을 볼 수 있어요</p>
+			</div>
+			<div class="feed">
+			<div class="feed-all">
+				<a href="./guroo-boardsalon/index.html" class="feed-1"><img src="feed-1.svg"></a>
+				<div class="hover-feed">
+				디테일하게 생각하기
+				</div>
+			</div>
+			<div class="feed-all">
+				<a href="./guroo-internal tool/index.html" class="feed-1"><img src="feed-2.svg"></a>
+				<div class="hover-feed">
+				공감으로 개선하기
+				</div>
+			</div>
+			<div class="feed-all">
+				<a href="./guroo-learnd/index.html" class="feed-1"><img src="feed-3.svg"></a>
+				<div class="hover-feed">
+					기획부터 협업하기
+				</div>
+			</div>
+		</div>
+		</div>
+		<div>
+	</section>
+<!-- 클로이 프로필 -->
+	<section style="background-color: rgb(14, 9, 43); background-attachment: fixed;">
+		<div style="height: 1600px" id="chloe-proflie">
+		<div class="row">
+			<div class="description">
+			<img src="description-back.svg" class="description-back">
+				<div class="chracter-des">
+					<img src="description-chloe.svg">
+					<h1 style="margin-top: 60px;">클로이</h1>
+					<p>일단 하고본다</p>
+				</div>
+				<div class="text-des">
+					<h3>Character description</h3>
+					<h2>도전의 자아</h2>
+					<h1>일단 시작하고 본다!</h1>
+					<p>저는 조심성이 많지만, 새로운 걸 좋아해서 많은 도전을 하곤 해요.<br>의외성이 있는 유니콘같은 부캐릭터예요.<br>
+						때론 도전에 실패하더라도, 과정 속의 경험에서 많은 것을 얻는 편이예요. </p>
+				<div class="skill">
+					<h3>Skill</h3>
+					<div class="skill-img" style="display: flex; align-items: center;">
+<!-- 					<img src="description-skill-figma.svg">
+					<img src="description-skill-adobe.svg" class="skill2">
+					<img src="description-skill-css3.svg" class="skill3"> -->
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="interview">
+				<div class="text-des">
+					<h3>Character interview</h3>
+					<h2>무작정 도전한 일에 후회한 적 없나요?</h2>
+				</div>
+				<div class="text-in">
+					<p>저는 조심성이 굉장히 많지만, 
+						<br>새로운 걸 얻을 수 있는 기회는 일단 잡고봐요.
+						 <br>일단 최선을 다해 해보면 결과에 상관없이, 
+						<br>또 다른 기회가 온다는 걸 경험했기 때문이에요.
+						<br>그래서 설령 실패해도 후회한 적은 없고, 그 환경 안에서 최선을 다합니다.</p>
+				</div>
+				<img src="interview-back.svg" class="interview-back" style="top:360px">
+			</div>
+		</div>
+	</section>
+<!-- 클로이 피드 -->
+	<section>
+		<div class="feed-back2" style="height:1200px;">
+		<div class="row">
+			<div class="feed-text wow fadeInDown" data-wow-offset="80">
+				<h1>The world</h1>
+				<p>도전의 자아 클로이의 경험 피드예요<br>이미지를 클릭하면 설명을 볼 수 있어요</p>
+			</div>
+			<div class="feed">
+			<div class="feed-all">
+				<a href="./chloe-desert/index.html" class="feed-1"><img src="feedchole-1.svg"></a>
+				<div class="hover-feed">
+				사막의 산 올라봤니?
+				</div>
+			</div>
+			<div class="feed-all">
+				<a class="feed-1"><img src="feedchloe-2.svg"></a>
+				<div class="hover-feed">
+				IT 강연에서 경험나누기
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		<div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="animate.css">
+	 <script src="wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>experience-internal tool</title>
+</head>
+<style type="text/css">
+		html{font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		scroll-behavior: smooth;
+		}
+		body,.intro,header,h1,p,li,nav,ul,h2,h3,button{margin: 0; padding: 0;}
+		li,ul,button{list-style: none;}
+		a,button{text-decoration: none; color: none;}
+
+		.header-full{
+			background-color: #322F2F;
+		}
+
+		.row{width: 1200px; margin: auto; position: relative;}
+
+		.header-img{
+			height: 100vh;
+			margin-top: 80px;
+			width: 1200px;
+			margin: 0 auto;
+			background: url(header-fit.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
+		.project-intro{
+			height: 130vh;
+			background-color: white;
+
+
+		}
+
+/*		.section1{
+			margin-top: -10px;
+			display: block;
+			margin: 0 auto;
+
+		}
+
+*/
+
+		.content-h1{
+			font-weight: 600;
+			font-size: 36px;
+			line-height: 132.2%;
+			letter-spacing: -0.08em;
+			text-align: center;
+		}
+
+		.content-p{
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 165%;
+			text-align: center;
+			letter-spacing: -0.08em;
+			color: #6A6A6A;
+		}
+
+		.dice-img{
+			display: block;
+			margin: 0 auto;
+			transform: scale(0.6);
+		}
+
+		.intro-1{
+			padding-top: 80px;
+		}
+
+
+		.roll-1{
+			padding-top: 180px;
+		}
+
+		.intro-2{
+			padding-top: 20px;
+		}
+
+		.ex-img{
+			display: block;
+			margin: 0 auto;
+			padding-top: 80px;
+
+		}
+
+		.explain{
+			display: block;
+			margin: 0 auto;
+			padding-top: 12px;
+			padding-bottom: 38px;
+		}
+
+		b{
+			color: #ff6452;
+		}
+
+		.mid-header{
+			margin-top: 100px;
+			padding-top: 18px;
+			height: 300px;
+			background-color: #322F2F;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
+		.mid-header-img{
+			height: 450px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.mid-1{
+			padding-top: 10px;
+		}
+
+		.content{
+			padding-top: 400px;
+		}
+
+		.container-flex{
+			display: flex;
+			gap: 200px;
+			height: 4000px;
+		}
+
+		.text-content{
+			height: 4000px;
+
+		}
+
+		.fix-pt{
+			width: 50%;
+			height: 800px;
+			position: sticky;
+			top: 100px;
+		}
+
+		.fix-pt-t{
+			/*padding-top: 20px;*/
+		}
+
+		.ct-h1{
+			padding-bottom: 30px;
+		}
+
+		.ct-p1{
+			word-break: break-all;
+			line-height: 180%;
+			font-weight: 400;
+		}
+
+		.content-in{
+			padding-top: 120px;
+		}
+
+		.wireframe-img{
+			padding-top: 40px; padding-bottom: 40px;
+
+		}
+
+		.final-img{
+			padding-top: 30px;
+			display: block;
+			margin: 0 auto;
+
+		}
+
+		.bt-next-po{
+				margin-top: 300px;
+   			 margin-bottom: 80px;
+		}
+
+		.bt-next{
+			display: block;
+			margin: 0 auto;
+			font-size: 18pt;
+			font-weight: 400;
+			text-align: center;
+			padding-left: 20px; padding-right: 20px;
+			width: 195px;
+			line-height: 80px;
+			letter-spacing: -0.08em;
+			height: 80px;
+			color: #322F2F;
+			border: 1px solid #322F2F;
+			border-radius: 36px;
+			transition: all 0.3s cubic-bezier(.645,.045,.355,1);
+		}
+
+		.bt-next:hover{
+			background-color: #322F2F;
+			color: white;
+		}
+
+		.bt-main{
+			position: fixed;
+			top: 80px;
+			left: 100px;
+		}
+
+		.bt-up{
+			position: fixed;
+			bottom: 80px;
+			right: 100px;
+		}
+
+</style>
+<body>
+<div class="header-full">
+	<div class="header-img wow fadeInDown"></div>
+<!-- 	<div class="row">
+		<header class="project-header" id="header">
+		</header> -->
+	</div>
+</div>
+	<a href="../index.html#guroo-feed" class="bt-main">
+		<img src="bt-main.svg">
+	</a>
+	<a href="#" class="bt-up">
+		<img src="bt-up.svg">
+	</a>
+	<section class="project-intro" id="intro">
+			<div class="row">
+				<div class="service-intro wow fadeInDown" data-wow-offset="50">
+					<img src="baby.svg" class="dice-img">
+					<h1 class="intro-1 content-h1">
+						베이비페이스라는 서비스를<br>운영하는 회사예요
+					</h1>
+					<p class="intro-2 content-p">
+						아기 초음파를 분석해서 얼굴을 예측해주는 서비스인 베이비페이스를 운영하는 스타트업입니다.
+						<br>이 서비스를 위해, 회사 안의 전문 분석자들이 사내 분석 툴을 활용하고 있어요. 
+					</p>
+
+					<!-- <img src="section1.svg" class="section1"> -->
+
+					<img src="ex-img.svg"  class="ex-img">
+				</div>
+
+				<div class="roll-intro wow fadeInDown" data-wow-offset="200">
+					<h1 class="roll-1 content-h1">
+						저는 이런 역할을 했어요
+					</h1>
+					<img src="explain.svg"  class="explain">
+					<p class="intro-2 content-p">
+						분석자들이 많아지면서 이들이 쉽게 툴을 활용해 분석하고, <br>
+						결과물을 쉽게 검수하고 피드백할 수 있는 시스템의 UX 개선이 필요했어요. <br>
+						프로젝트에서 저는 팀원과 함께 <b>시스템을 편하게 사용할 수 있는 UX 개선안</b>을 도출했습니다. <br>
+						그 중 가장 개선이 컸던 부분을 소개해드릴게요 💪
+					</p>
+
+				</div>
+			</div>
+	</section>
+	<section class="mid-header wow fadeInDown" data-wow-offset="200">
+		<img src="mid-header.svg" class="mid-header-img">
+		<div class="row">
+				<div class="service-intro">
+					<p class="intro-2 content-p">
+						공감하고 개선하기 | 간편완료와 피드백
+					</p>
+					<h1 class="mid-1 content-h1">
+						쉬운 작업물 피드백 환경 만들기
+					</h1>
+				</div>
+		</div>
+	</section>
+	<section class="content">
+	<div class="row">
+	<div class="container-flex wow fadeInDown" data-wow-offset="100">
+		<div class="fix-pt">
+			<!-- <img src="protoex.svg"> -->
+			<div class="fix-pt-t">
+			<h1 class="content-h1" style="text-align: left; padding-left: 20px;">
+				인터널 툴 개선
+			</h1>
+			<p class="content-p" style="text-align: left; padding-left: 20px;">
+				intern project
+			</p>
+			<p class="content-p" style="text-align: left; padding-left: 20px;">
+				회사 보안 관계로 프로토타이핑을 보여드리기 어려워요
+			</p>
+			</div>
+		</div>
+		<div class="text-content">
+			<section class="function">
+				<h1 class="content-h1 ct-h1" style="text-align: left;">
+				기능 배경
+			</h1>
+			<p class="content-p ct-p1"  style="text-align: left;">
+			<b style="font-size: 18pt;">먼저 팀 자체에서 툴 이용 상황 확인 및 유저 인터뷰를 진행했어요.</b>
+
+			<br>
+			팀원인 저도 주로 이용하는 내부 툴이고 평소 생각해왔던 페인포인트가 많아서, <br>유저 인터뷰에 더 깊이 공감할 수 있었습니다.
+			도출한 페인포인트로 현재 툴의 가장 큰 문제점을 분석했을 때, <br>이렇게 두 가지를 꼽을 수 있었어요.
+			</p>
+		<div style="padding-top: 40px; color: #6a6a6a">
+			<h1 class="content-h1" style=" font-size: 16pt; padding-bottom: 40px; text-align: left;">
+				재택분석자의 작업량 증가로 분석작업 시간이 늘어나, <br>제품 제공에 차질이 생김.
+			</h1>
+			<h1 class="content-h1" style="font-size: 16pt; padding-bottom: 10px; text-align: left;">
+				최종검수자의 원활한 검수 및 피드백 시스템 부재로 <br>일의 효율성이 떨어짐. 
+			</h1>
+
+		</div>
+
+			<section class="function content-in">
+				<h1 class="content-h1 ct-h1" style="text-align: left;">
+				기능 도출
+			</h1>
+			<p class="content-p ct-p1"  style="text-align: left;">
+			두번째 페인포인트를 좀 더 상세히 풀어보자면,
+			</p>
+		<div style="margin-top: 40px; margin-bottom: 20px; padding: 13px; color: #ff6452; width: 600px; border: 1px solid #ff6452; border-radius: 24px;">
+			<h1 class="content-h1" style="font-size: 18pt; text-align: ;">
+				최종검수자의 원활한 검수 및 피드백 시스템 부재로 <br> 일의 효율성이 떨어짐. 
+			</h1>
+		</div>
+			<p class="content-p ct-p1"  style="text-align: left; margin-bottom: 10px;">
+		<b>1</b> <br>최종검수자가 분석자의 작업물 확인을 하기 위해서는 여러 개의 페이지를 거쳐야 했어요. 
+		<br>그 과정에서 상당한 시간이 낭비되었습니다.
+			</p>
+			<p class="content-p ct-p1"  style="text-align: left; margin-bottom: 10px;">
+		<b>2</b> 
+		<br>최종검수자는 주문 조절을 위해 분석완료 시간에 확인완료를 맞춰야 했는데, 
+		<br>이를 위해 이미 확인한 작업물을 한번 더 확인해야 했어요.
+			</p>
+		<p class="content-p ct-p1"  style="text-align: left; margin-bottom: 10px;">
+		<b>3</b> 
+		<br>특정 작업물에 대한 피드백을 남기기가 어려워, 분석자와 따로 메세지를 여러 번 주고받아야 했고 
+		<br>피드백이 원활하게 적용되지 않아 제품 품질에 안 좋은 영향을 주었어요.
+			</p>
+		<p class="content-p ct-p1"  style="text-align: left; margin-top: 30px;">
+			<b>이 세 가지를 해결하기 위해 프로젝트 팀은 세 가지 기능을 도출했습니다.</b> 
+		</p>
+		<div style="display: flex; gap:24px">
+		<div style="margin-top: 40px; margin-bottom: 20px; padding: 13px; color: #ff6452; width: 80px; border: 1px solid #ff6452; border-radius: 24px;">
+			<h1 class="content-h1" style="font-size: 16pt; text-align: ;">
+				간편완료
+			</h1>
+		</div>
+		<div style="margin-top: 40px; margin-bottom: 20px; padding: 13px; color: #ff6452; width: 80px; border: 1px solid #ff6452; border-radius: 24px;">
+			<h1 class="content-h1" style="font-size: 16pt; text-align: ;">
+				예약완료
+			</h1>
+		</div>
+		<div style="margin-top: 40px; margin-bottom: 20px; padding: 13px; color: #ff6452; width: 100px; border: 1px solid #ff6452; border-radius: 24px;">
+			<h1 class="content-h1" style="font-size: 16pt; text-align: ;">
+				피드백 설정
+			</h1>
+		</div>
+		</div>
+		</section>
+			<section class="wireframe content-in">
+				<h1 class="content-h1 ct-h1" style="text-align: left;">
+				개선안
+			</h1>
+			<p class="content-p ct-p1"  style="text-align: left;">
+				진행했던 개선안을 보여드릴게요.
+			</p>
+
+			</section>
+			<section class="wireframe content-in wow fadeInDown" data-wow-offset="100">
+			<p class="content-p"  style="text-align: left; color: #ff3e3e;">1</p>
+				<h1 class="content-h1 ct-h1" style="text-align: left;">
+				간편완료
+			</h1>
+			<p class="content-p ct-p1"  style="text-align: left;">
+			최종검수자의 검수 확인에서 중요한 점은 분석자의 최종 작업물 확인, 컨펌된 작업물 넘기기, 
+			<br>작업물 피드백 이었어요. <b>첫 화면에서 이 과정을 진행할 수 있는 간편완료 기능</b>을 만들었습니다. 
+			<br>시간 낭비를 최대한 줄이고, 문제없는 작업물을 빠르게 확인하고 넘기게 했어요. 
+			</p>
+			<img src="ct-1.svg" class="wow fadeInDown" data-wow-offset="100" style="padding-top: 30px;">
+			</section>
+
+			<section class="wireframe content-in wow fadeInDown" data-wow-offset="100">
+			<p class="content-p"  style="text-align: left; color: #ff3e3e;">2</p>
+				<h1 class="content-h1 ct-h1" style="text-align: left;">
+				예약완료
+			</h1>
+			<p class="content-p ct-p1"  style="text-align: left;">
+			<b style="color: #2f80ed; font-weight: 400;">이 도출안은 공개가 어려워요</b><br>
+			이미 컨펌된 작업물을 여러 번 확인할 필요가 없도록, <b>정해진 시간에 작업물을 자동으로 넘겨주는 기능</b>을 만들었어요. 고객에게 제공되는 분석완료 시간을 기준으로 예약완료 기능을 제공했습니다.
+			개발팀에서 툴 개선을 위해 노력해주신 결과물이예요.</p>
+			</section>
+
+			<section class="wireframe content-in wow fadeInDown" data-wow-offset="100">
+			<p class="content-p"  style="text-align: left; color: #ff3e3e;">3</p>
+				<h1 class="content-h1 ct-h1" style="text-align: left;">
+				피드백 설정
+			</h1>
+			<p class="content-p ct-p1"  style="text-align: left;">
+		피드백은 기존의 페인포인트 개선과 함께 새로운 니즈가 결합된 기능이에요.<br>
+		특정 작업물에 대한 피드백이 존재할 때, 최종검수자가 <b>검수 확인에서 피드백을 남기고 작업물 반려를 진행할 수 있어요.</b> 이렇게 분석자의 전 작업물과 피드백이 반영된 작업물을 비교하며 내용을 확인할 수 있었고 이전보다 직관적으로 피드백 확인 및 반영이 가능했어요! 
+		</p>
+		<img src="ct-2.svg" class="wow fadeInDown" data-wow-offset="100" style="padding-top: 30px;">
+			</section>
+
+
+
+
+
+
+			<section class="wireframe content-in">
+			<p class="content-p ct-p1 wow fadeInDown" data-wow-offset="100"  style="text-align: left;">
+			UX 개선안이 시간을 거쳐 반영되었습니다.
+	<br>결과적으로 분석자와 최종검수자들의 작업시간이 단축되면서 고객에게 더 품질이 좋은 결과물을 제공할 수 있었어요. 
+
+	특히 다수의 분석자와 최종검수자들이 존재하는 상황에, <b>다른 커뮤니케이션 툴을 빌리지 않고 분석 및 검수를 원활하게 진행</b>할 수 있었다는 점에서 효율성을 증진시킨 개선이라고 생각합니다.
+			</p>
+			</section>		
+		</div>
+	</div>
+	</div>
+	</section>
+
+	<section  class="wow fadeInDown" data-wow-offset="100" style="background: #322F2F; height: 300px; margin-top: 80px;">
+				<p class="content-p ct-p1" style="padding-top:80px; color: white;">
+			시간을 낭비하는 페인포인트를 찾아내고 효율성을 올린 UX 개선은,
+			<br>제가 먼저 내부 툴을 사용하는 유저였고 또 다른 유저들의 목소리를 여러 번 듣고 공감했기 때문에 가능했던 개선입니다.
+
+			<br>고민없는 효율적인 개선을 위해, 
+			유저의 문제에 대한 깊은 공감의 중요성을 배웠습니다.
+
+			<br>해결하고 싶으면, 유저에 빙의해보기!</p>
+		<!-- <img src="final.svg" class="final-img wow fadeInDown" data-wow-offset="100"> -->
+	</section>
+	<div class="bt-next-po"><a href="../guroo-learnd/index.html" class="bt-next wow bounce">다음 경험 보러가기</a></div>
+</body>
+</body>
+</html>
